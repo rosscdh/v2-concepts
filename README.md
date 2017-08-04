@@ -22,6 +22,10 @@ make build-product-module
 ### Elixir
 
 ```
+http http://127.0.0.1:8880/product/my-funky-assed-product
+echo '{"age":22, "gender":"male", "name":{"first_name": "ross", "last_name":"crawford"}, "avatar_url":"https://lh3.googleusercontent.com/-UPgtz_Ljyz0/AAAAAAAAAAI/AAAAAAAAAAA/AMp5VUpYx_Tsj9SyVZFtCp1ZfX_LtJONEQ/s64-c-mo-md/photo.jpg"}' | http post http://127.0.0.1:8880/product/my-funky-assed-product
+
+
 ab -n 10000 -c 100  http://127.0.0.1:8880/
 
 Server Software:        Cowboy
